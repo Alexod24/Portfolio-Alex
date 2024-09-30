@@ -1,0 +1,42 @@
+---
+import BlogItem from "./BlogItem.astro"
+const BLOG = [
+  
+  {
+    date: "1 Octubre",
+    title: "Cómo establecer metas efectivas",
+    category: "Productividad",
+    description:
+      "Aprende a establecer metas SMART (Específicas, Medibles, Alcanzables, Relevantes y Temporales) para mejorar tu enfoque y productividad en el día a día.",
+    link: "Ir a Notion",
+  },
+  {
+    date: "5 Octubre",
+    title: "La importancia de la disciplina diaria",
+    category: "Disciplina",
+    description:
+      "Descubre cómo la disciplina en tus hábitos diarios puede transformar tu vida y ayudarte a alcanzar tus objetivos a largo plazo.",
+    link: "Ir a Notion",
+  },
+  {
+    date: "10 Octubre",
+    title: "Técnicas de gestión del tiempo",
+    category: "Productividad",
+    description:
+      "Explora técnicas como la Técnica Pomodoro y la regla de los 2 minutos para maximizar tu tiempo y ser más eficiente en tus tareas.",
+    link: "Ir a Notion",
+  },
+];
+---
+
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <ol class="relative mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {
+      BLOG.map((blog) => (
+        <li>
+          <BlogItem {...blog} />
+        </li>
+      ))
+    }
+  </ol>
+</div>

@@ -1,31 +1,85 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "@/layouts/Layout.astro"
 
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import GDGIcon from '../components/icons/GDG.astro';
-import YoutubeIcon from '../components/icons/Youtube.astro';
+import AboutMe from "@/components/AboutMe.astro"
+import Blog from "@/components/Blog.astro"
 
-import SocialPill from '../components/SocialPill.astro';
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 
+import Experience from "@/components/Experience.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+
+import Projects from "@/components/Projects.astro"
+
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
+<Layout
+   title="Portfolio de Alex | Desarrollador y Programador Web"
+	 description="Contrata a Alex para que pueda comer"
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    
+    <div class="space-y-24" >
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
 
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
 
-			<img 
-				class="rounded-full w-12 h-12 mb-4" 
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+
+	<SectionContainer id="blog">
+		<TitleSection>
+		  <ProfileCheck class="size-8" />
+		  Blog
+		</TitleSection>
+		<Blog />
+	  </SectionContainer>
+  </div>
+  </main>
+</Layout>
+
+---
+<!-- 
+<Layout
+	 title="Portfolio de Alex | Desarrollador y Programador Web"
+	 description="Contrata a Alex para que pueda comer"
+	 > -->
+
+			<!-- <img 
+				class="rounded-full size-12 mb-4" 
 				src="https://media.licdn.com/dms/image/D4D03AQHH45fimBPlUw/profile-displayphoto-shrink_200_200/0/1708795078992?e=2147483647&v=beta&t=e_eoEsVvAhPAQNPQ8FEU6Kk2C-as5aSJS1q5cvV-GFo" 
 				alt="alex-photo"
 			/>
 
 
 
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hola, soy Yonatan <a 
 				href="https://pe.linkedin.com/in/ordo%C3%B1ez-diego" 
 				rel="noopener" 
@@ -36,34 +90,29 @@ import SocialPill from '../components/SocialPill.astro';
 				</a> 
 				
 			</h1>
-			<h2 class="text-2xl "><span class="text-yellow-500/90 opacity-80"> Lorem ipsum, </span>dolor sit amet consectetur <span class="text-red-500/90"> adipisicing elit</span>. 
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span class="text-yellow-500/90 opacity-80"> Lorem ipsum, </span>dolor sit amet consectetur <span class="text-red-500/90"> adipisicing elit</span>. 
 				Rem nam soluta non <span class="text-blue-500/90">perferendis blanditiis</span> quae at, voluptatum officiis totam beatae, quas ex animi. 
 				Doloribus natus <span class="text-green-500/90">repudiandae quas sapiente</span> <span class="opacity-50"> quibusdam sequi.</span></h2>
 
 			<nav class="flex gap-x-2 mt-8">
 
 				<SocialPill>
-					<LinkedInIcon class="w-6 h-6" />LinkedIn 
+					<LinkedInIcon class="size-4 lg:size-6" />LinkedIn 
 				</SocialPill>
 
 				<SocialPill>
-					<GitHubIcon class="w-6 h-6" />GitHub
+					<GitHubIcon class="size-4 lg:size-6" />GitHub
 				</SocialPill>
 
 				<SocialPill>
-					<GDGIcon class="w-6 h-6" />GDG
+					<GDGIcon class="size-4 lg:size-6" />GDG
 				</SocialPill>
 
 				<SocialPill>
-					<YoutubeIcon class="w-6 h-6" />Youtube
+					<YoutubeIcon class="size-4 lg:size-6" />Youtube
 				</SocialPill>
 
-			</nav>
+			</nav> -->
 						
 				
-		</section>
-	</main>
-</Layout>
-
-
- 
+	
