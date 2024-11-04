@@ -78,20 +78,19 @@ const PROJECTS = [
 
 ---
 
-<div class="flex flex-col gap-y-16" style="margin-top: 70px;">
+<div class="flex flex-col gap-y-16 items-center" style="margin-top: 70px;">
   {PROJECTS.map(({ image, title, description, tags, link, github, reverse }) => (
     <article
-      class={`flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 ${reverse ? 'md:flex-row-reverse' : ''}`}
+      class={`flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 ${reverse ? 'md:flex-row-reverse' : ''} w-full max-w-4xl`}
     >
-      <div class="w-full md:w-1/2">
-        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img
-            alt="Imagen del proyecto"
-            class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-            src={image}
-          />
-
-        </div>
+      <div class="w-full md:max-w-[325px]">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                  alt="Imagen del proyecto"
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  src={image}
+              />
+          </div>
       </div>
 
       <div class="w-full md:w-1/2 md:max-w-lg">
@@ -99,7 +98,7 @@ const PROJECTS = [
         <div class="flex flex-wrap mt-2">
           <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-2">
             {tags.map((tag) => (
-              <li>
+              <li key={tag.name}>
                 <span
                   class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                 >

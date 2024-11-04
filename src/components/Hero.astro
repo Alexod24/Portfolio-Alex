@@ -6,6 +6,7 @@ import MailIcon from "../components/icons/GDG.astro"
 import SocialPill from "../components/SocialPill.astro"
 import GitHub from "./icons/GitHub.astro"
 import Youtube from "./icons/Youtube.astro"
+import LottieAnimation from './icons/LottieAnimation.astro';
 ---
 
 
@@ -22,7 +23,7 @@ import Youtube from "./icons/Youtube.astro"
   target="_blank"
   rel="noopener"
   class="flex items-center gap-4 mb-4 transition-transform duration-300 ease-in-out transform md:justify-center md:hover:scale-105"  ></a> 
-  <Badge>Enviame un mensaje</Badge>
+  <!-- <Badge>Enviame un mensaje</Badge> -->
   </a>
 
     
@@ -30,15 +31,17 @@ import Youtube from "./icons/Youtube.astro"
     Hola, soy Alex
   </h1>
 
-  <p  style="margin-top: 20px;"> Me apasiona el mundo del desarrollo y estoy en constante crecimiento. Me encuentro inmerso en un emocionante viaje de aprendizaje, donde <strong>cada día descubro nuevas formas de aplicar mis conocimientos y expandir mis habilidades.</strong>. </p>
+  <p style="margin-top: 20px; max-width: 76%;"> Me apasiona el mundo del desarrollo y estoy en constante crecimiento. Me encuentro inmerso en un emocionante viaje de aprendizaje, donde cada día descubro nuevas formas de aplicar mis conocimientos y expandir mis <strong>habilidades.</strong>. </p>
 
   </div>
 
-  <img width="200" height="200" src="/yo.jpg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-0 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50% ; border-radius: 100%; position: relative; top: 40px">
+  <!-- <img width="200" height="200" src="https://lottie.host/embed/5d87c1db-256b-4f0c-803d-a854ab49b7fa/S2OAFD3m5V.json" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-0 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50% ; border-radius: 100%; position: relative; top: 40px"> -->
+
+<LottieAnimation />
 
 </article>
 
-  <nav class="flex flex-wrap gap-4 mt-0">
+  <nav class="flex flex-wrap gap-4 mt-0" style="margin-top: 15px;">
     
 
     <SocialPill href="https://www.linkedin.com/in/ordo%C3%B1ez-diego/">

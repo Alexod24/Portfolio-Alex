@@ -21,7 +21,7 @@ const {title, description} = Astro.props
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image" href="/projects/code1.png" />
+		<link rel="icon" type="image" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions>
@@ -29,13 +29,20 @@ const {title, description} = Astro.props
 	
 	<body class="relative text-black dark:text-white">
 		<div
-		class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-		dark:bg-[radial-gradient(ellipse_50%_50%_at_85%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
+    class="absolute inset-0 -z-10 h-full w-full bg-gray-50 dark:bg-gray-950
+           bg-[linear-gradient(to_right,#f0f0f0_1px,transparent 1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent 1px)]
+           dark:bg-[linear-gradient(to_right,#4a4a4a_1px,transparent 1px),linear-gradient(to_bottom,#4a4a4a_1px,transparent 1px)]
+           bg-[size:6rem_4rem]">
+</div>
 
-		<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-		</div>
+
+
+
+
+
+		
+
+		
 		<Header/>
 		<slot />
 		<Footer>
@@ -125,6 +132,19 @@ const {title, description} = Astro.props
 				}
 			}
 			</style>
+
+// LottieAnimation.astro
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+
+<lottie-player 
+    src="https://lottie.host/5d87c1db-256b-4f0c-803d-a854ab49b7fa/S2OAFD3m5V.json" 
+    background="transparent" 
+    speed="1" 
+    style="width: 200px; height: 200px; border-radius: 100%; position: relative; top: 40px; object-fit: cover;"
+    loop 
+    autoplay>
+</lottie-player>
+
 		</body>
 		
 		</html>
